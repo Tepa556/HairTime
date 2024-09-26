@@ -1,0 +1,768 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #6c757d; /* Серый фон */
+    padding: 10px 0;
+    width: 100%;
+}
+
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__inner a{
+    text-decoration: none;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+}
+.logo{
+    width: 90px; 
+    height: 90px;
+}
+.header__logo-text {
+    font-weight: 800;
+    font-size: 32px;
+    color: #fff;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.header__nav {
+    display: flex;
+    transition: transform 0.3s ease; /* Плавная анимация */
+    transform: translateX(-100%); /* Скрываем nav за пределами экрана */
+   margin-right: -18%;
+}
+
+.nav__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__item {
+    margin-left: 20px;
+}
+.nav__item .nav__link img{
+    margin-top: -10px;
+}
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.header__burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.header__burger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+.void-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+
+.begin{
+    height: 600px;
+    padding-top: 7%;
+    background-image: url('./image/Фон\ начала.png');
+    opacity: 0;
+    transform: translateX(-8%); /* Изначально смещаем элемент вниз */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.begin h1{
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 96px;
+}
+.begin p{
+    color: white;
+    font-size: 36px;
+}
+.our-offer{
+    opacity: 0;
+    transform: translateX(-8%); /* Изначально смещаем элемент вниз */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    margin-top: 3%;
+}
+.our-offer h2{
+    font-weight: 800;
+    font-size: 64px;
+    margin-bottom: 50px;
+}
+.my-card{
+    width: 260px;
+    height: 320px;
+    padding-top: 40%;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
+.about-us{
+    margin-top: 5%;
+    opacity: 0;
+    transform: translateX(-8%); /* Изначально смещаем элемент вниз */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.about-us h2{
+    font-size: 64px;
+    font-weight: 800;
+
+}
+.about-us p{
+    font-size: 36px;
+    font-weight: 200;
+    
+}
+.location{
+    margin-top: 2%;
+}
+.map{
+    margin-left: 30%;
+    margin-top: 5%;
+}
+.info-block{
+    max-width: 477px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 2%;
+    color: white;
+    font-weight: 800;
+    font-size: 36px;
+}
+.news-and-events{
+    margin-top: 5%;
+    opacity: 0;
+    transform: translateX(-8%); /* Изначально смещаем элемент вниз */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.news-and-events h2{
+    font-size: 64px;
+    font-weight: 800;
+    width: 670px;
+}
+.event{
+    width: 500px;
+    height: 360px;
+}
+.event h3{
+    width: 320px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 800;
+    margin-left: 20%;
+    margin-top: 7%;
+    color: white;
+}
+.info-data{
+    width: 197px;
+    height: 48px;
+    background-color: gray;
+    color: white;
+    border-radius: 40px;
+    margin-top: 17%;
+    margin-left: 58%;
+    text-align: center;
+    padding-top: 1%;
+    font-weight: 800;
+    font-size: 24px;
+}
+.footer{
+    margin-top: 6%;
+    padding-top: 2%;
+    height: 264px;
+    color: white;
+}
+.footer h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+.logo-footer{
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 40px;
+}
+.footer-item{
+    font-size: 16px;
+    font-weight: 300;
+} 
+.rights_reserved{
+    margin-top: 4%;
+}
+.rights_reserved p{
+    font-weight: 100;
+    font-size: 20px;
+}
+.about-us-begin{
+    height: 958px;
+    padding-top: 7%;
+    background-image: url('./image/Фон\ начала.png');
+}
+.our-team{
+    margin-top: 5%;
+    opacity: 0;
+    transform: translateX(-8%); /* Изначально смещаем элемент вниз */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.our-team h2{
+    font-weight: 800;
+    font-size: 64px;
+}
+.our-team p{
+    margin-top: 10%;
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.rounded-custom {
+    border-radius: 20px;
+}
+.regist-on-servise-form{
+    width: 500px;
+   }
+/* Кастомная кнопка розового цвета */
+.btn-pink {
+    width: 248px;
+    background-color: #FFD1DC;
+    color: #fff;
+    border: none;
+    font-size: 32px;
+    padding: 10px 0;
+    font-weight: 800;
+}
+
+.btn-pink:hover {
+    background-color: #ff99a1;
+}
+
+/* Дополнительные стили */
+.card-body a {
+    color: #000;
+}
+
+.card-body a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #6c757d;
+}
+
+/* Отступы между элементами */
+.mb-4 {
+    margin-bottom: 20px !important;
+}
+.promo-card {
+    color: white;
+    width: 500px;
+    height: 400px; /* Set height as needed */
+    border-radius: 15px;
+    background-color: #6c757d;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.overlay{
+    width: 300px;
+    word-wrap: break-word;
+    position: relative;
+    top: 30px;
+    font-weight: 800;
+    font-size: 24px;
+    width: 393px;
+    left: 10%;
+    text-align: center;
+
+}
+
+.date-badge{
+    position: relative;
+    top: 20%;
+    left: 55%;
+    text-align: center;
+    width: 196px;
+    height: 48px;
+    background-color: #000000;
+    padding-top: 1%;
+    border-radius: 40px;
+    font-weight: 800;
+    font-size: 24px;
+}
+.edit-icons{
+    position: relative;
+    bottom: 15px;
+    left: 85%;
+    width: 80px;
+}
+.edit-icons img{
+    cursor: pointer;
+}
+.add_news{
+    width: 493px;
+    height: 72px;
+    background-color: #FFD1DC;
+    color: #fff;
+    font-weight: 800;
+    font-size: 32px;
+    border-radius: 40px;
+}
+.add_news:hover {
+    background-color: #ff99a1;
+    color: #000;
+}
+/* Адаптивные стили */
+@media (max-width:1199px){
+    .our-team img{
+        margin-top: 20%;
+    }
+}
+@media (max-width:991px){
+    .our-team h2{
+        text-align: center;
+        margin-bottom: 2%;
+    }
+    .our-team p{
+        text-align: center;
+        margin-top: -1%;
+    }
+    .our-team img{
+        margin-top: 5%;
+        margin-left: 16%;
+    }
+    .add-news-container h1{
+        font-size: 28px;
+    }
+    .add_news{
+        width: 393px;
+        height: 72px;
+        background-color: #FFD1DC;
+        color: #fff;
+        font-weight: 800;
+        font-size: 25px;
+        border-radius: 40px;
+    }
+}
+@media(max-width:958px){
+    .begin h1{
+        font-size: 76px;
+        margin-top: 0%
+    }
+    .begin p{
+        color: white;
+        font-size: 33px;
+    }
+}
+@media (max-width:955px) {
+    .map{
+        margin-top: 2%;
+        margin-right: 30%;
+    }
+}
+@media (max-width: 768px) {
+    .header__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #6c757d;
+        width: 200px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        z-index: 20;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .nav__item {
+        margin: 20px 0;
+    }
+
+    .header__burger {
+        display: flex;
+    }
+
+    .header__nav.active {
+        transform: translateX(0); /* Показываем nav */
+    }
+
+    .void-block.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@media (max-width:767px){
+    .our-team h2{
+        font-size: 44px;
+        margin-bottom: -8%;
+    }
+    .our-team p{
+        margin-top: 10%;
+        font-size: 25px;
+    }
+    .our-team img{
+        width: 400px;
+        margin-top: 5%;
+        margin-left: 12%;
+    }
+    .add-news-container h1{
+        margin-left: 24vh;
+    }
+    .add_news{
+      margin-right: 10vh;
+    }
+}
+@media (max-width:762px){
+    .info-block{
+        padding-top: 4.5%;
+     }
+}
+@media (max-width:742px){
+    .info-block{
+       padding-top: 4.5%;
+    }
+    .map{
+        margin-top: 2%;
+        margin-left: -100.5vw;
+    }
+} 
+@media (max-width:733px){
+    .begin{
+        height: 300px;
+        padding-top: 7%;
+        background-image: url('./image/Фон\ начала.png');
+    }
+    .begin h1{
+        font-size: 46px;
+        margin-top: -1%
+    }
+    .begin p{
+        color: white;
+        font-size: 20px;
+        margin-top: -4%;
+    }
+    .our-offer h2{
+        font-size: 44px;
+    }
+    .about-us h2{
+        font-size: 44px;
+        font-weight: 800;
+    }
+    .about-us p{
+        font-size: 23px;
+        font-weight: 200;
+    }
+    .location h2{
+        font-size: 44px;
+    }
+    .about-us .container h2{
+        font-size: 44px;
+    }
+    .info-block{
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        padding-top: 1%;
+     }
+     .news-and-events h2{
+        font-size: 44px;
+        font-weight: 800;
+        max-width: 570px;
+    }
+    .promo-card {
+        width: 400px;
+        height: 300px; /* Set height as needed */
+    }
+    .overlay{
+        left: 5%;
+    }
+    .date-badge{
+        top: 20%;
+        left: 45%;
+    }
+    .footer{
+        height: 200px;
+    }
+    .footer h3{
+        font-size: 13px;
+    }
+    .logo-footer{
+        font-size: 30px;
+    }
+    .footer-item{
+        font-size: 12px;
+    } 
+    .social-icon[alt="vk"],.social-icon[alt="tg"]{
+        width: 30px;
+    }
+    .rights_reserved p{
+        font-size: 14px;
+    }
+}
+@media (max-width:616px){
+    .footer{
+        height: 210px;
+    }
+    .news-and-events h2{
+        max-width: 450px;
+        width: 100%;
+    }
+}
+@media (max-width:555px){
+    .add-news-container h1{
+        margin-left: 20vh;
+    }
+    .add_news{
+      margin-right: 8vh;
+    }
+}
+@media (max-width:542px){
+    .begin p{
+        color: white;
+        font-size: 15px;
+        margin-top: -4%;
+    }
+}
+@media (max-width:500px){
+    .our-team p{
+        margin-top: 10%;
+        font-size: 20px;
+    }
+    .our-team img{
+        width: 300px;
+        margin-top: 5%;
+        margin-left: 18%;
+    }
+}
+@media (max-width:469px){
+    .our-team h2{
+        font-size: 40px;
+    }
+    .our-offer h2{
+        font-size: 40px;
+    }
+    .about-us h2{
+        font-size: 40px;
+        font-weight: 800;
+    }
+    .location h2{
+        font-size: 40px;
+    }
+    .about-us .container h2{
+        font-size: 40px;
+    }
+    .footer h3{
+        font-size: 12px;
+    }
+    .logo-footer{
+        font-size: 20px;
+    }
+    .footer-item{
+        font-size: 11px;
+    } 
+    .social-icon[alt="vk"],.social-icon[alt="tg"]{
+        width: 25px;
+    }
+    .rights_reserved p{
+        font-size: 12px;
+    }
+}
+@media (max-width:461px){
+    .header__logo .logo{
+        width: 60px;
+        height: 60px;
+    }
+    .header__logo-text {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    .begin h1{
+        font-size: 36px;
+        margin-top: 10%
+    }
+    .our-offer h2{
+        font-size: 30px;
+    }
+    .my-card{
+        width: 200px;
+        height: 230px;
+        padding-top: 20%;
+    }
+    .about-us h2{
+        font-size: 30px;
+        font-weight: 800;
+    }
+    .about-us p{
+        font-size: 16px;
+        font-weight: 200;
+    }
+    .our-team p{
+        margin-top: 15%;
+        font-size: 16px;
+    }
+    .location h2{
+        font-size: 30px;
+    }
+    .about-us .container h2{
+        font-size: 30px;
+    }
+    .info-block{
+        max-width: 200px;
+        height: 30px;
+        font-size: 15px;
+        padding-top: 1%;
+     }
+     .news-and-events h2{
+        font-size: 30px;
+    }
+    .promo-card {
+        width: 300px;
+        height: 200px; 
+        margin-left: 13%;
+    }
+    .overlay{
+        width: 300px;
+        left: 0%;
+        font-size: 20px;
+    }
+    .date-badge{
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+        top: 20%;
+        left: 45%;
+    }
+}
+@media (max-width:462px){
+    .add-news-container h1{
+        margin-left: 20vh;
+    }
+    .add_news{
+      margin-right: -2vh;
+    }
+    .edit-icons{
+        position: relative;
+        bottom: 15px;
+        left: 75%;
+        width: 80px;
+    }
+    .edit-icons img{
+        width: 25px;
+    }
+}
+@media (max-width:422px){
+    .add_news{
+        width: 293px;
+        height: 42px;
+        font-size: 15px;
+        margin-right: 8vh;
+    }
+}
+@media (max-width:404px){
+    .our-team img{
+        width: 300px;
+        margin-top: 5%;
+        margin-left: 12%;
+    }
+}
+@media (max-width:401px){
+    .footer{
+        height: 185px;
+    }
+    .logo-footer{
+        font-size: 15px;
+    }
+    .promo-card {
+        width: 300px;
+        height: 200px; 
+        margin-left: -1%;
+    }
+}
+@media (max-width:379px){
+    .footer{
+        height: 165px;
+    }
+    .footer h3{
+        font-size: 10px;
+    }
+    .footer-item{
+        font-size: 9px;
+    } 
+    .social-icon[alt="vk"],.social-icon[alt="tg"]{
+        width: 20px;
+    }
+    .rights_reserved p{
+        font-size: 10px;
+    }
+    .promo-card {
+        margin-left: 5%;
+    }
+    .our-team img{
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+}
+@media (max-width:360px){
+    .add-news-container h1{
+        margin-left: 10vh;
+    }
+    .add_news{
+      margin-right: 1vh;
+    }
+    .promo-card {
+        width: 300px;
+        height: 200px; 
+        margin-left: -4%;
+    }
+
+}
+/*Анимации на сайте*/
+.animate {
+    opacity: 1;
+    transform: translateX(0); /* Возвращаем элемент в исходное положение */
+}

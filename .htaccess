@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Удаляем расширение .php из URL
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Удаляем расширение .html из URL
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Перенаправляем все запросы на script.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ script.php?page=$1 [L,QSA]
+
